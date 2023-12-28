@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Click Counter</title>
+</head>
+<body>
+<div class = "dmdj">
+    <p>count: <span id="count">0</span></p>
+    <button id="clickButton">button</button>
+</div>
+
+<script>
+    // 클릭 횟수를 저장할 변수 초기화
+    let clickCount = 0;
+
+    // 버튼 요소를 가져옴
+    const clickButton = document.getElementById('clickButton');
+
+    // 클릭 이벤트에 대한 핸들러 함수 정의
+    function handleClick() {
+        // 클릭 횟수 증가
+        clickCount++;
+
+        // 화면에 횟수 업데이트
+        document.getElementById('count').textContent = clickCount;
+    }
+
+    // 버튼에 클릭 이벤트 리스너 추가
+    clickButton.addEventListener('click', handleClick);
+</script>
+
+</body>
+</html>
